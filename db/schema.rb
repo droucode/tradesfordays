@@ -10,10 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_13_124821) do
+ActiveRecord::Schema.define(version: 2021_11_24_065522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "enquiries", force: :cascade do |t|
+    t.text "tasks"
+    t.string "date"
+    t.string "address"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "tradeservice_id", null: false
+    t.bigint "quote_id", null: false
+    t.index ["quote_id"], name: "index_enquiries_on_quote_id"
+    t.index ["tradeservice_id"], name: "index_enquiries_on_tradeservice_id"
+    t.index ["user_id"], name: "index_enquiries_on_user_id"
+  end
+
+  create_table "quotes", force: :cascade do |t|
+    t.decimal "price"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_quotes_on_user_id"
+  end
+
+  create_table "tradeservices", force: :cascade do |t|
+    t.string "name"
+    t.string "budget"
+    t.string "trade"
+    t.text "description"
+    t.string "status"
+    t.string "location"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,4 +61,8 @@ ActiveRecord::Schema.define(version: 2021_11_13_124821) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "enquiries", "quotes"
+  add_foreign_key "enquiries", "tradeservices"
+  add_foreign_key "enquiries", "users"
+  add_foreign_key "quotes", "users"
 end
