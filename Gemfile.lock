@@ -257,7 +257,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
-  popper_js (~> 1.14.3)
+  popper_js (~> 1.14.7)
   puma (~> 4.1)
   rails (~> 6.0.4, >= 6.0.4.1)
   sass-rails (>= 6)

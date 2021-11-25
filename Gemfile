@@ -59,4 +59,4 @@ gem "aws-sdk-s3", "~> 1.107"
 
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
-gem 'popper_js', '~> 1.14.3'
+gem 'popper_js', '~> 1.14.7'
