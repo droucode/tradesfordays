@@ -20,10 +20,10 @@ class TradeservicesController < ApplicationController
     end
   
     def edit  
-        @tradeservice
     end
   
     def update
+        redirect_to tradeservices_path
     end
 
     def create 
