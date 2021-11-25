@@ -57,6 +57,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem "aws-sdk-s3", "~> 1.107"
 
-gem 'bootstrap', '~> 5.1.3'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
-gem 'popper_js', '~> 2.9.3'
+gem 'popper_js', '~> 1.14.3'
