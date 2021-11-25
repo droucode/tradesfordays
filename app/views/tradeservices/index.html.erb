@@ -1,0 +1,27 @@
+<p>Tradeservices</p>
+
+<div class="row">
+    <%# This is how I create my cards to display items for sale %>
+    <% @tradeservices.each do |tradeservice| %>
+        <div class="col-md-4">
+            <div class="card" style="width: 20rem;">
+            <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
+            <%= image_tag(tradeservice.picture, alt: "image", class: "card-img-top") if tradeservice.picture.attached? %>
+            <%# <%= image_tag tradeservice.picture, class:"card-img-top" %>
+            <div class="card-body">
+                <h5 class="card-title"><%= tradeservice.name %></h5>
+                <p class="card-text menu-description"><%= tradeservice.description %></p>
+                <p class="card-text menu-budget"><%= tradeservice.budget %></p>
+                <p class="card-text menu-trade"><%= tradeservice.trade %></p>
+                <p class="card-text menu-status"><%= tradeservice.status %></p>
+                <p class="card-text menu-location"><%= tradeservice.location %></p>
+
+            </div>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+
+
+
