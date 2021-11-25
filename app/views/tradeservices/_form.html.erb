@@ -1,0 +1,23 @@
+<%= form_with model: @tradeservice do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <br>    
+    <%= form.label :budget %>
+    <%= form.text_field :budget %>
+    <br>
+    <%= form.label :trade %>
+    <%= form.text_field :trade %>
+    <br>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+    <br>
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+    <br>
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+    <br>
+
+    <%= form.submit %>
+
+    <% end %>

@@ -1,0 +1,16 @@
+<%= form_with model: @enquiry do |form| %>
+    <%= form.label :task %>
+    <%= form.text_area :tasks %>
+    <br>    
+    <%= form.label :date %>
+    <%= form.text_field :date %>
+    <br>
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+    <br>
+    <%= form.submit %>
+
+    <% end %>
+
+
+
