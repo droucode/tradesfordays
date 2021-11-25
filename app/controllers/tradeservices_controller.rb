@@ -33,6 +33,9 @@ class TradeservicesController < ApplicationController
 
   
     def destroy 
+        @tradeservice = Tradeservice.find(params[:id])
+        @tradeservice.destroy
+        redirect_to tradeservices_path
     end 
 
     private 
@@ -41,7 +44,7 @@ class TradeservicesController < ApplicationController
     end 
 
     def tradeservice_params
-        params.require(:tradeservice).permit(:name, :budget, :trade, :description, :status, :location)
+        params.require(:tradeservice).permit(:picture, :name, :budget, :trade, :description, :status, :location)
     end 
 
 end

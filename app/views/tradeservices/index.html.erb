@@ -1,1 +1,29 @@
 <p>Tradeservices</p>
+
+
+<div class="row">
+    <%# This is how I create my cards to display items for sale %>
+    <% @tradeservices.each do |tradeservice| %>
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+            <%# I dont need to use this right now %>
+            <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
+            <%= image_tag(tradeservice.picture, alt: "image", class: "card-img-top") if tradeservice.picture.attached? %>
+            <%# <%= image_tag tradeservice.picture, class:"card-img-top" %>
+            <div class="card-body">
+                <h5 class="card-title"><%= tradeservice.name %></h5>
+                <p class="card-text menu-description"><%= tradeservice.description %></p>
+                <%# I dont need to use this one for now %>
+                <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
+                <%= link_to "More Info", tradeservice_path(tradeservice.id), class:"btn btn-primary" %>
+            </div>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+
+
+
+
+page where trade services should display 
