@@ -75,6 +75,8 @@ This problem within the industy needs to be reoslved because Trade businesses ar
 #### R13 Wireframes
 #### R14 ERD 
 
+![tradesfordays_ERD](docs/ERD.png)
+
 
 #### R15 Explain the different high-level components (abstractions) in your app
 
