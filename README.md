@@ -295,7 +295,8 @@ one-to-many / in trades for days
 #### R19 Provide your database schema design
 
 ![schema_blobs](docs/models_blobs.png)
-![schema_active_record_models](docs/models_schema.png)
+![schema_active_record_models_part_1](docs/models_schema.png)
+![schema_active_record_models_part_2](docs/models_schema_2.png)
 
 #### R20 Describe the way tasks are allocated and tracked in your project
 
