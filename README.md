@@ -285,6 +285,6 @@ one-to-many / in trades for days
 
 #### R19 Provide your database schema design
 
-![schema_active_record_models](docs/models_schema.png)
 ![schema_blobs](docs/models_blobs.png)
+![schema_active_record_models](docs/models_schema.png)
 
