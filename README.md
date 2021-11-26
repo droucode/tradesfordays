@@ -279,14 +279,25 @@ Within these tables are primary keys, which detail the data type and attribute o
 There are also foreign keys, which are responsible for creating as association between tables. These are very useful when creating a database, because they ensure that there is no dupication of attribues and data from one table can be referneced to another without dublication. 
 
 one-to-one / in trades for days 
-Means.. one registration account per user. 
+- User can only have one registration 
+- Enquiry can only have one user 
+- Enquiry can only have one quote 
+- Enquiry can only have one trade service 
+- Quote can only have one user 
 
 one-to-many / in trades for days 
 - User can have many enquiries 
 - User can have many quotes 
+- Tradeservice can have many enquiries 
+- Tradeservice can have many quotes 
+- Quote can have many enquies 
 
 #### R19 Provide your database schema design
 
 ![schema_blobs](docs/models_blobs.png)
 ![schema_active_record_models](docs/models_schema.png)
 
+#### R20 Describe the way tasks are allocated and tracked in your project
+
+I used a trello board to plan the steps for my applictaion and created checklists within each card. 
+I cut down the sections into Prep, Backend, README, Presentation, its a method i pefer because it allows me to view the project in a layer structure. 
