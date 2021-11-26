@@ -300,4 +300,6 @@ one-to-many / in trades for days
 #### R20 Describe the way tasks are allocated and tracked in your project
 
 I used a trello board to plan the steps for my applictaion and created checklists within each card. 
-I cut down the sections into Prep, Backend, README, Presentation, its a method i pefer because it allows me to view the project in a layer structure. 
+I cut down the sections into Prep, Backend, README, Presentation, its a method i pefer because it allows me to view the project in a layer structure. link below! 
+
+https://trello.com/b/stgq9KBU/amy-droungas-t2a2 
