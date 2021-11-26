@@ -20,7 +20,7 @@ class TradeservicesController < ApplicationController
     end
   
     def update
-        @tradeservice= Tradeservice.find(params[:id])
+        @tradeservice = Tradeservice.find(params[:id])
         @tradeservice.update(tradeservice_params) 
         redirect_to tradeservices_path
     

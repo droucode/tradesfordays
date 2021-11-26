@@ -20,7 +20,7 @@ class EnquiriesController < ApplicationController
     end
   
     def update
-        @enquiry= Enquiry.find(params[:id])
+        @enquiry = Enquiry.find(params[:id])
         @enquiry.update(enquiry_params) 
         redirect_to enquiries_path
     
