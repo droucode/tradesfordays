@@ -88,6 +88,8 @@ please not when navigating to edit listing page, go to tradeservice/1/edit to vi
 - I do not want other users to have access to editing my enquiries/quotes/listing
 
 #### R13 Wireframes
+please note i was not able to achieve the indent design for the webapplication, however this design is a future development. 
+![tradesfordays_wireframes](docs/wireframes-deskteop-ipad-iphone.png)
 #### R14 ERD 
 
 ![tradesfordays_ERD](docs/ERD.png)
@@ -99,11 +101,10 @@ Application Core Components that make trades for days, and how they interact.
 
 Trades for days is a two sided marketplace, built on Ruby on Rails which hosts MVC software design pattern ( model, view, controller). It allows the software engineer to effectivly create applications by dividing each function. 
 
- The model contains data, states and logic used by the application.  
- The view is responsible for the user interface.
- Finally, the controller controller passes information and changes between the view and the model to the user.
-
+Details below: 
 ##### View 
+The view: is the component which the user interacts with through the browser.
+
 - Devise folder 
 ```new.html.erb```
 linked to https://trades-fordays.herokuapp.com/users/sign_in, is where the user directed to sign in/sign up and be authenticated. This is achieved through the Devise Gem, that automatically generation registration and login forms. 
@@ -128,10 +129,6 @@ There are four controllers within this web-application.
 ```application_controller.rb```
 - This controller is responsible for setting the paramiters sign_up and devise. 
 
-```enquiries_controller.rb```
-
-UNANSWERED
-
 ```pages_controller.rb```
 - Does not have a huge role within this application, it was created when devise was implemented in the application, and is the root directory. 
 
@@ -154,6 +151,10 @@ Within this controller there are before actions included:
 ```before_action :authenticate_user!, only:[:new, :edit, :show]```
 
 What is happening here is that, the trades person must be authenicated before having access to create/edit/update/destroy a listing.
+
+```enquiries_controller.rb```
+
+- This controller is responsible for the paramiters arond the enquiries. Using the same format as the tradservices controller. However with different parmatiters. The enquiry parmaiters include :task, :date :address. 
 
 
 ##### Routes 
@@ -236,8 +237,28 @@ PostgreSQL. It is an open source Relational Database Management System. It allow
 
 ##### R16 Detail any third party services that your app will use
 1. S3 Amazon Web Services
+AWS have the option for a base teir free registration. The service offers a large variety of features, one being S3 (simple storage service). I implemented this feature into my application because the S3 buckets are a safe a reliable way to store images which are used and uploading onto the web application. The images are stored in the bucket which is secured with saftely protocols and is show in the view when called upon by amazon web servies. This is important because images can become compromised. 
  
 2. Heroku, deploymnet
+Heroku is a free cloud platform, which hosts deploying web applications for many hobby softare enginners and start up companies. The features include, allowing uses to build, monitor and deploy their applictaion. It also stores the master key to web services, which is critical in the functinality of the S3 bucket on the application. Heroku offers a vast rage of documentation, which supports the community it navigating their platform. heroku commands can used alongside git and GitHub. 
+
+3. GitHub 
+GitHub is a massive platform that hosts version control implimentations, which is accessed through git (in the command line). In this project, i utilised the branch feature in GitHub, which allowed me to work and make changes, which where independent to the main branch. Once your code is ready and functional, you merge the two branches. 
+
+4. Tello 
+Trello is a project managemnet platform, which helps uses break up and plan tasks. The platform is free to use. In my expereince, the features trello offers, is very benificial in managing my tasks.
+
+5. App.diagram 
+Is an free online too that provides users with all the visual cut outs to create diagrams/sitemaps/ERD and other structure. I have used this platform across all of my assessments and find it is easy and clear to use. 
+
+6. Balsamiq
+Supports users in creating mock ups of their projects. The software is very handy and critical in the planning statges of projects, especially ones which are client focused. Presenting a mock website to a client, is made possible using this software. 
+
+7. Bootstrap 
+Is a propular CSS framework, for responsive mobile-first applications. I utilised bootstrap in the creation of my cards, which stored informations about tradeservices. 
+
+8. VS Code 
+Is source-code editor made by Microsoft for Windows, Linux and macOS. It supports software egineers in a wealth of areas, one being debugging. I have used VS code across of my projects. 
 
 ##### Devise
 Devise is a rails based ruby gem that is used of User Authentication. There is a wealth of pre build configurations to devise. 
