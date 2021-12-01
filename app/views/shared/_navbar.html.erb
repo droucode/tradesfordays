@@ -4,6 +4,8 @@
 <%= link_to "Sign Out",destroy_user_session_path, method: "delete" %>
 <%= link_to "New Listing", new_tradeservice_path, method: "get" %>
 <%= link_to "Make Enquiry", new_enquiry_path, method: "get" %>
+<%= link_to "View Trade Listings", tradeservices_path,  method: "get" %>
+<%= link_to "View Enqiries", enquiries_path, method: "get" %>
 
 <% else %>
 <%= link_to "Sign In", new_user_session_path %>

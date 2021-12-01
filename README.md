@@ -36,9 +36,17 @@ This problem within the industy needs to be reoslved because Trade businesses ar
 
 - Purpose: To better serve the trade industry, allowing licenced porfessionals the means to advertise and track their enquires, quotes and book jobs. While the user is able to register and easily search for their trades servies and filter by budget and availability; All while supporting an non-for-profot organisation.
 
-- Functionality / features: Login, Create and Edit a listing, AWS S3 uploading images capability. 
+- Functionality / features: 
+user is able to register 
+user is able to Login,
+user is able to create a Trade listing 
+user is able to upload an image
+user is able to make an enquiry 
 - Sitemap application_sitemap
+![tradesfordays_sitemap](docs/tradesfordays_sitemap.png)
 - Screenshots
+
+
 - Target audience: Licenced Trades persons and Indivduals that require a service
 - Tech stack: Ruby, Ruby on Rails, Postgresql, VS Code, AWS S3 html,Git, GitHub, HTML5 CSS3/SCSS,  Heroku, App.diagram.net (ERD, Sitemap), Trello, Balsamiq, Microsoft Powerpoint (Presentation)
 
@@ -291,6 +299,11 @@ one-to-many / in trades for days
 - Tradeservice can have many enquiries 
 - Tradeservice can have many quotes 
 - Quote can have many enquies 
+
+
+Primary Key: 
+- username / User table 
+
 
 #### R19 Provide your database schema design
 

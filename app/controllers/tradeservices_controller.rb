@@ -9,8 +9,18 @@ class TradeservicesController < ApplicationController
         @tradeservices = Tradeservice.all
     end
   
-    def show
-    end
+    def show  
+            @tradeservice = Tradeservice.find(params[:id])
+            
+        
+            if @tradeservice.nil?
+             render  :new
+            end
+            
+          end
+          def new
+              @tradeservice = Tradeservice.new
+          end
   
     def new
         @tradeservice = Tradeservice.new
@@ -22,9 +32,7 @@ class TradeservicesController < ApplicationController
     def update
         @tradeservice = Tradeservice.find(params[:id])
         @tradeservice.update(tradeservice_params) 
-        redirect_to tradeservices_path
-    
-   
+
     end
 
     def create 
