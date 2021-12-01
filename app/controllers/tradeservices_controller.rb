@@ -1,19 +1,26 @@
 class TradeservicesController < ApplicationController
 
-
     before_action :authenticate_user!, :set_tradeservice, only: %i[ show edit update destroy ]
     before_action :authenticate_user!, only:[:new, :edit, :show]
 
-
     # before_action :authenticate_user!, only: [:restricted]
    
-    
     def index
         @tradeservices = Tradeservice.all
     end
   
-    def show
-    end
+    def show  
+            @tradeservice = Tradeservice.find(params[:id])
+            
+        
+            if @tradeservice.nil?
+             render  :new
+            end
+            
+          end
+          def new
+              @tradeservice = Tradeservice.new
+          end
   
     def new
         @tradeservice = Tradeservice.new
@@ -23,7 +30,9 @@ class TradeservicesController < ApplicationController
     end
   
     def update
-        redirect_to tradeservices_path
+        @tradeservice = Tradeservice.find(params[:id])
+        @tradeservice.update(tradeservice_params) 
+
     end
 
     def create 
