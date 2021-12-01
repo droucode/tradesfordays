@@ -1,11 +1,5 @@
 # README
 
-
-#### R9 
-https://trades-fordays.herokuapp.com/ 
-#### R10 
-https://github.com/droucode/tradesfordays 
-
 #### R7 Identification of the problem you are trying to solve by building this particular marketplace app
 
 Finding trades services for individuals who are new to renovating/making repairs to your home can be difficult. It is not until you're in that position when you're suddenly asking your friends and family,
