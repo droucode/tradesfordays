@@ -1,26 +1,15 @@
 class TradeservicesController < ApplicationController
-
+#before actions are manditory steps to be taken before any actions set out in the controller. 
     before_action :authenticate_user!, :set_tradeservice, only: %i[ show edit update destroy ]
     before_action :authenticate_user!, only:[:new, :edit, :show]
 
-    # before_action :authenticate_user!, only: [:restricted]
-   
+   #CRUD 
     def index
         @tradeservices = Tradeservice.all
     end
   
     def show  
-            @tradeservice = Tradeservice.find(params[:id])
-            
-        
-            if @tradeservice.nil?
-             render  :new
-            end
-            
-          end
-          def new
-              @tradeservice = Tradeservice.new
-          end
+    end 
   
     def new
         @tradeservice = Tradeservice.new

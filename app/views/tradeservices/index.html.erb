@@ -1,18 +1,17 @@
 <p>Tradeservices</p>
-
 <div class="row">
-
-    <% @tradeservices.each do |tradeservice| %>
-        <div class="col-md-4">
-            <div class="card" style="width: 20rem;">
-            <%= image_tag(tradeservice.picture, alt: "image", class: "card-img-top") if tradeservice.picture.attached? %>
-            <div class="card-body">
-                <h5 class="card-title"><%= tradeservice.name %></h5>
-                <p class="card-text menu-description"><%= tradeservice.description %></p>
-                <p class="card-text menu-budget"><%= tradeservice.budget %></p>
-                <p class="card-text menu-trade"><%= tradeservice.trade %></p>
-                <p class="card-text menu-status"><%= tradeservice.status %></p>
-                <p class="card-text menu-location"><%= tradeservice.location %></p>
-
-                   <% end %>
-                  </div>
+<%# Bootstrap/ cards created to store tradeservice listing information %>
+<% @tradeservices.each do |tradeservice| %>
+<div class="col-md-4">
+<div class="card" style="width: 20rem;">
+<%# images %>
+<%= image_tag(tradeservice.picture, alt: "image", class: "card-img-top") if tradeservice.picture.attached? %>
+<div class="card-body">
+<h5 class="card-title"><%= tradeservice.name %></h5>
+<p class="card-text menu-description"><%= tradeservice.description %></p>
+<p class="card-text menu-budget"><%= tradeservice.budget %></p>
+<p class="card-text menu-trade"><%= tradeservice.trade %></p>
+<p class="card-text menu-status"><%= tradeservice.status %></p>
+<p class="card-text menu-location"><%= tradeservice.location %></p>
+<% end %>
+</div>

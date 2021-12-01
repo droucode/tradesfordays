@@ -1,15 +1,14 @@
 <div class="row">
-    <%# This is how I create my cards to display items for sale %>
-    <% @enquiries.each do |enquiry| %>
-        <div class="col-md-4">
-            <div class="card" style="width: 20rem;">
-            <%# <%= image_tag tradeservice.picture, class:"card-img-top" %>
-              <div class="card-body">
-                <h5 class="card-title"><%= enquiry.name %></h5>
-                <p class="card-text menu-task"><%= enquiry.task %></p>
-                <p class="card-text menu-date"><%= enquiry.date %></p>
-                <p class="card-text menu-address"><%= enquiry.address %></p>
-  </div>
+<%# Bootstrap cards to display %>
+<% @enquiries.each do |enquiry| %>
+<div class="col-md-4">
+<div class="card" style="width: 20rem;">
+<div class="card-body">
+<h5 class="card-title"><%= enquiry.name %></h5>
+<p class="card-text menu-task"><%= enquiry.task %></p>
+<p class="card-text menu-date"><%= enquiry.date %></p>
+<p class="card-text menu-address"><%= enquiry.address %></p>
 </div>
-   <% end %>
+</div>
+<% end %>
 </div>

@@ -40,12 +40,19 @@ This problem within the industy needs to be reoslved because Trade businesses ar
 user is able to register 
 user is able to Login,
 user is able to create a Trade listing 
+user is able to edit a Trade listing 
 user is able to upload an image
 user is able to make an enquiry 
+
+please not when navigating to edit listing page, go to tradeservice/1/edit to view functionality. 
+
 - Sitemap application_sitemap
 ![tradesfordays_sitemap](docs/tradesfordays_sitemap.png)
 - Screenshots
-
+![Tradesfordays_listing_page](docs/tradelistings.png)
+![Tradesfordays_new_listing_page](docs/newtradelisting.png)
+![Tradesfordays_new_enquriy_page](docs/new_enquiry.png)
+![Tradesfordays_edit_listing_page](docs/edittradelisting.png)
 
 - Target audience: Licenced Trades persons and Indivduals that require a service
 - Tech stack: Ruby, Ruby on Rails, Postgresql, VS Code, AWS S3 html,Git, GitHub, HTML5 CSS3/SCSS,  Heroku, App.diagram.net (ERD, Sitemap), Trello, Balsamiq, Microsoft Powerpoint (Presentation)
