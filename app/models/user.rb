@@ -16,7 +16,6 @@ private
     if login.nil?
       self.login = email unless email.blank?
     end 
-  end 
 
   def username_downcase
     self.username_downcase!
