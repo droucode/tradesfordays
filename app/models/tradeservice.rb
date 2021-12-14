@@ -25,8 +25,8 @@ class Tradeservice < ApplicationRecord
         logs.create! body: 'Updated'
     end
   
-    def capitalize_title
-      self.title = name.capitalize
+    def capitalize_name
+      self.name = name.capitalize
     end
 
 end
