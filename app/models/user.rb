@@ -17,10 +17,4 @@ private
       self.login = email unless email.blank?
     end 
   end 
-
-
-before_save :username_downcase
-private 
-def username_downcase
-  self.username_downcase!
-end
+end 
