@@ -19,7 +19,7 @@ private
   end 
 
   def username_downcase
-    self.username_downcase!
+    self.username_downcase
   end
 
 end
