@@ -5,8 +5,9 @@ class EnquiriesController < ApplicationController
  
 
     def index
-   # Get request, to route enquires.  
+   # Get request, to route enquires_path  
    # .all is an alias for find.all. It displays all current enquiries in the database.
+   # @enquries = Enquiry.all.includes(:category)
         @enquiries = Enquiry.all
     end
   

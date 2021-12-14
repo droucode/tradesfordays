@@ -8,6 +8,7 @@ class TradeservicesController < ApplicationController
    # Get request, to route tradeservices. This is the root url/index. 
    # .all is an alias for find.all. It displays all current tradeservice listings in the database.
    # All tradeservices are able to be queried through the index. Eg, created, edited and deleted. 
+   # @tradeservices = Tradservice.all.includes(:category) 
         @tradeservices = Tradeservice.all
     end
   
@@ -66,7 +67,7 @@ class TradeservicesController < ApplicationController
    
     private 
     # Best practice: lowing visabliity of methods with private- these are not intented to be actions. 
-    # They are used to set up constraints between actions. 
+    # Used to set up constraints between actions. 
     # The find method finds the first record matching the set params, in this case tradeservice :id. 
     def set_tradeservice
         @tradeservice = Tradeservice.find(params[:id])
