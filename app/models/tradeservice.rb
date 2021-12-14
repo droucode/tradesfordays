@@ -11,17 +11,22 @@ class Tradeservice < ApplicationRecord
 
     after_create :log_create
     after_update :log_update
-
+    after_validation :capitalize_title
+ 
     def to_s
-        "Tradeservuce #{id}; #{name}, #{budget},#{trade}, #{description}, #{status}, #{location}"
+        "Tradeservice #{id}; #{name}, #{budget},#{trade}, #{description}, #{status}, #{location}"
     end
 
     def log_create
-        logs.create! body: 'Created'
+        logs.create! body: 'Created '
     end
 
     def log_update
         logs.create! body: 'Updated'
+    end
+  
+    def capitalize_title
+      self.title = title.capitalize
     end
 
 end
