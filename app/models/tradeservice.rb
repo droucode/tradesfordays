@@ -5,7 +5,7 @@ class Tradeservice < ApplicationRecord
     validates :name, presence: true
     validates :budget, presence: true
     validates :trade, presence: true
-    validates :description, presence: true, format: { with: /\A[a-zA-Z][a-zA-Z ]+\z/, message: "alphabets only" }
+    validates :description, presence: true, format: { with: /\A[a-zA-Z][a-zA-Z ]+\z/ }
     validates :status, presence: true
     validates :location, presence: true
 end
