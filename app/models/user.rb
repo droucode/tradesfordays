@@ -8,6 +8,7 @@ has_many :quotes
 validates :email, presence: true
 validates :username, presence: true
 
+before_save :username_downcase
 before_validation :login_value 
 
 private 
@@ -15,5 +16,11 @@ private
     if login.nil?
       self.login = email unless email.blank?
     end 
+  end 
+
+  def username_downcase
+    self.username_downcase!
+  end
+
 end
 
